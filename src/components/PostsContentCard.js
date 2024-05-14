@@ -4,7 +4,7 @@ import { BiEditAlt } from "react-icons/bi";
 
 const PostsContentCard = (props) => {
   const handleDelete = () => {
-    fetch(`http://localhost:4000/posts/${props.id}`, {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${props.id}`, {
       method: "DELETE",
     })
       .then((res) => {

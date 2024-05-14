@@ -18,7 +18,7 @@ const PostDetails = () => {
           <h3>Description</h3>
           <p>{posts.body}</p>
         </section>
-        <section>
+        {/* <section>
           <h3>Tags</h3>
           <p>
             {posts.tags.map((tag) => (
@@ -27,7 +27,7 @@ const PostDetails = () => {
               </span>
             ))}
           </p>
-        </section>
+        </section> */}
         <p>
           Go back to the <Link to="/posts">Post page</Link>
         </p>
@@ -40,6 +40,6 @@ const PostDetails = () => {
 export default PostDetails;
 
 export const postDetailsLoader = async ({ params }) => {
-  const res = await fetch(`http://localhost:4000/posts/${params.id}`);
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`);
   return res.json();
 };

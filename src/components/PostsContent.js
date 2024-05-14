@@ -6,7 +6,7 @@ const PostsContent = () => {
   let initialized = useRef(false);
   useEffect(() => {
     if (!initialized.current) {
-      fetch("http://localhost:4000/posts/")
+      fetch("https://jsonplaceholder.typicode.com/posts/")
         .then((res) => {
           return res.json();
         })

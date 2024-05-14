@@ -3,20 +3,20 @@ import { useState } from "react";
 const NewPostsContent = () => {
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [tags, setTags] = useState("");
+  // const [tags, setTags] = useState("");
 
   const formSubmit = (e) => {
     e.preventDefault();
     const post = {
       title,
       body,
-      tags: tags.split(","),
+      // tags: tags.split(","),
     };
-    if (title.length === 0 || body.length === 0 || tags.length === 0) {
+    if (title.length === 0 || body.length === 0) {
       console.log("all fields are required");
       return;
     }
-    fetch("http://localhost:4000/posts", {
+    fetch("https://jsonplaceholder.typicode.com/posts", {
       method: "POST",
       "Content-Type": "application/json",
       body: JSON.stringify(post),
@@ -24,7 +24,6 @@ const NewPostsContent = () => {
       .then((res) => {
         setTitle("");
         setBody("");
-        setTags("");
       })
       .catch((err) => {
         console.log(err);
@@ -56,7 +55,7 @@ const NewPostsContent = () => {
             onChange={(e) => setBody(e.target.value)}
           />
         </div>
-        <div>
+        {/* <div>
           <label htmlFor="tags">
             Tags [NB: Seperate each tag with a comma ( , ) ]
           </label>
@@ -68,7 +67,7 @@ const NewPostsContent = () => {
             value={tags}
             onChange={(e) => setTags(e.target.value)}
           />
-        </div>
+        </div> */}
         <div>
           <input type="submit" value="Add Post" />
         </div>

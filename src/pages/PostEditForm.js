@@ -6,17 +6,17 @@ const PostEditForm = () => {
   const postToEdit = useLoaderData();
   const [title, setTitle] = useState(postToEdit.title);
   const [body, setBody] = useState(postToEdit.body);
-  const [tags, setTags] = useState(postToEdit.tags);
+  // const [tags, setTags] = useState(postToEdit.tags);
 
   const formSubmit = (e) => {
     e.preventDefault();
     const post = {
       title,
       body,
-      tags: tags.split(","),
+      // tags: tags.split(","),
     };
 
-    fetch(`http://localhost:4000/posts/${postToEdit.id}`, {
+    fetch(`https://jsonplaceholder.typicode.com/posts/${postToEdit.id}`, {
       method: "PATCH",
       "Content-Type": "application/json",
       body: JSON.stringify(post),
@@ -54,7 +54,7 @@ const PostEditForm = () => {
               onChange={(e) => setBody(e.target.value)}
             />
           </div>
-          <div>
+          {/* <div>
             <label htmlFor="tags">
               Tags [NB: Seperate each tag with a comma ( , ) ]
             </label>
@@ -66,7 +66,7 @@ const PostEditForm = () => {
               value={tags}
               onChange={(e) => setTags(e.target.value)}
             />
-          </div>
+          </div> */}
           <div>
             <input type="submit" value="Update Post" />
           </div>
