@@ -56,6 +56,7 @@ div.side-content {
   overflow-x: hidden;
   overflow-y: auto;
   display: flex;
+  flex-direction: column;
   gap: 20px;
   border-radius: 20px 0 20px 0;
 }
@@ -251,6 +252,11 @@ footer span:nth-child(2) {
   footer .content > div:first-child {
     flex-direction: row;
     gap: 80px;
+  }
+
+  /* SIDEBAR */
+  div.side-content {
+    flex-direction: row;
   }
 }
 
