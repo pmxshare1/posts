@@ -4,8 +4,7 @@ const RightContent = () => {
       <h3>Ethics</h3>
       <p>
         Demonstrates concern for others to encourage them to be ethical and
-        demand ethical behaviour from them to do the right thing when nobody is
-        looking.
+        demand ethical behaviour from them to do the right thing even in the absence of people.
       </p>
       <h3>Critical Thinking</h3>
       <p>
@@ -14,15 +13,14 @@ const RightContent = () => {
       </p>
       <h3>Leadership & Teamwork</h3>
       <p>
-        Demonstrates confidence and humility has good interpersonal skills and
-        engages fully with members of a team to organized and be able to plan
+        Demonstrates confidence, humility and good interpersonal skills and
+        engages fully with members of a team to organize and be able to plan
         and follow through on complex projects
       </p>
       <h3>Confidence</h3>
       <p>
-        Probes deeply and continuously in a chosen field and keep an open mind
-        Shows confidence but never feels rejected knows it all Demonstrates
-        awareness of global and multicultural issues
+        Probes deeply and continuously in a chosen field keeping an open mind
+        with confidence and demonstrates awareness of global and multicultural issues.
       </p>
       <h3>Professionalism</h3>
       <p>
