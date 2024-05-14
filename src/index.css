@@ -248,7 +248,7 @@ footer span:nth-child(2) {
   margin-right: 10px;
 }
 
-@media screen and (min-width: 850px) {
+@media screen and (min-width: 750px) {
   footer .content > div:first-child {
     flex-direction: row;
     gap: 80px;
